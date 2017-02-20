@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int ones=0,t=0;
+        //in a array every element appears three times exept one 
+        //this program will find it
+        //[3,3,3,2,2,2,1] output 1
+        for(int i=0;i<nums.size();i++)
+        {
+            ones=(ones^nums[i])&~t;
+            t=(t^nums[i])&~ones;
+        }
+        return ones;
+    }
+};
