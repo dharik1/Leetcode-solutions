@@ -6,7 +6,7 @@ public:
         perm(nums,0,v);
         return v;
     }
-    void perm(vector<int>& nums,int i,vector<vector<int>>& v)
+    void perm(vector<int> nums,int i,vector<vector<int>>& v)
     {
         if(i==nums.size()-1)
         {
@@ -21,7 +21,6 @@ public:
             }
             swap(nums[i],nums[k]);
             perm(nums,i+1,v);
-            swap(nums[i],nums[k]);
         }
     }
 };
