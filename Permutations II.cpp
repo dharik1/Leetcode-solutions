@@ -21,7 +21,6 @@ public:
             }
             swap(nums[i],nums[k]);
             perm(nums,i+1,v);
-            swap(nums[i],nums[k]);
         }
     }
 };
